@@ -1,0 +1,49 @@
+# porn
+
+DOMAIN-KEYWORD,pornhub
+DOMAIN-KEYWORD,xvideos
+
+# info
+
+DOMAIN-SUFFIX,archive.org
+DOMAIN-SUFFIX,beehiiv.com
+DOMAIN-SUFFIX,newsminimalist.com
+DOMAIN-SUFFIX,theverge.com
+DOMAIN-SUFFIX,rsshub.app
+DOMAIN-SUFFIX,ycombinator.com
+DOMAIN-SUFFIX,bloomberg.com
+DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,engadget.com
+
+# crypto
+
+DOMAIN-SUFFIX,ipfs.io
+DOMAIN-SUFFIX,binance.org
+DOMAIN-SUFFIX,uniswap.org
+DOMAIN-SUFFIX,infura.io
+DOMAIN-SUFFIX,opensea.io
+DOMAIN-SUFFIX,metamask.io
+DOMAIN-SUFFIX,coingecko.com
+DOMAIN-SUFFIX,tradingview.com
+
+# linkedin
+
+DOMAIN-KEYWORD,licdn
+DOMAIN-SUFFIX,linkedin.com
+
+# x
+
+DOMAIN-SUFFIX,vimeo.com
+DOMAIN-SUFFIX,nvidia.com
+DOMAIN-SUFFIX,unsplash.com
+DOMAIN-SUFFIX,sssoou.com
+DOMAIN-SUFFIX,epg.pw
+DOMAIN-SUFFIX,hostloc.com
+
+# net
+
+DOMAIN-SUFFIX,xn--6nq44rc0n82k.com
+DOMAIN-SUFFIX,xn--mes358aby2apfg.com
+DOMAIN-SUFFIX,xn--4gq62f52gdss.com
+DOMAIN-SUFFIX,nanoport.xyz
+DOMAIN-SUFFIX,pqjc.site
