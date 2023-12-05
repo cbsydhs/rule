@@ -242,8 +242,6 @@ payload:
   - DOMAIN-SUFFIX,feedburner.com
   - DOMAIN-SUFFIX,fflick.com
   - DOMAIN-SUFFIX,financeleadsonline.com
-  - DOMAIN-SUFFIX,firebase.com
-  - DOMAIN-SUFFIX,firebase.io
   - DOMAIN-SUFFIX,firebaseapp.com
   - DOMAIN-SUFFIX,firebaseio.com
   - DOMAIN-SUFFIX,flutter.dev
@@ -264,9 +262,7 @@ payload:
   - DOMAIN-SUFFIX,get.app
   - DOMAIN-SUFFIX,get.dev
   - DOMAIN-SUFFIX,get.how
-  - DOMAIN-SUFFIX,get.new
   - DOMAIN-SUFFIX,get.page
-  - DOMAIN-SUFFIX,get.rsvp
   - DOMAIN-SUFFIX,getbumptop.com
   - DOMAIN-SUFFIX,getmdl.io
   - DOMAIN-SUFFIX,getoutline.org
@@ -292,7 +288,6 @@ payload:
   - DOMAIN-SUFFIX,googel.com
   - DOMAIN-SUFFIX,googil.com
   - DOMAIN-SUFFIX,googl.com
-  - DOMAIN-SUFFIX,google-access.net
   - DOMAIN-SUFFIX,google-analytics-cn.com
   - DOMAIN-SUFFIX,google-analytics.com
   - DOMAIN-SUFFIX,google-syndication.com
@@ -323,7 +318,6 @@ payload:
   - DOMAIN-SUFFIX,google.cl
   - DOMAIN-SUFFIX,google.cm
   - DOMAIN-SUFFIX,google.cn
-  - DOMAIN-SUFFIX,google.co
   - DOMAIN-SUFFIX,google.co.ao
   - DOMAIN-SUFFIX,google.co.bw
   - DOMAIN-SUFFIX,google.co.ck
@@ -543,7 +537,6 @@ payload:
   - DOMAIN-SUFFIX,googletraveladservices.com
   - DOMAIN-SUFFIX,googlevads-cn.com
   - DOMAIN-SUFFIX,googleventures.com
-  - DOMAIN-SUFFIX,googlezip.net
   - DOMAIN-SUFFIX,googlr.com
   - DOMAIN-SUFFIX,goolge.com
   - DOMAIN-SUFFIX,gooogle.com
@@ -564,9 +557,7 @@ payload:
   - DOMAIN-SUFFIX,gvt7.com
   - DOMAIN-SUFFIX,gvt9.com
   - DOMAIN-SUFFIX,gwtproject.org
-  - DOMAIN-SUFFIX,haplorrhini.com
   - DOMAIN-SUFFIX,hdrplusdata.org
-  - DOMAIN-SUFFIX,hey.boo
   - DOMAIN-SUFFIX,hey.gle
   - DOMAIN-SUFFIX,hindiweb.com
   - DOMAIN-SUFFIX,howtogetmo.co.uk
@@ -574,7 +565,6 @@ payload:
   - DOMAIN-SUFFIX,hwgo.com
   - DOMAIN-SUFFIX,iam.soy
   - DOMAIN-SUFFIX,iamremarkable.org
-  - DOMAIN-SUFFIX,idx.dev
   - DOMAIN-SUFFIX,igoogle.com
   - DOMAIN-SUFFIX,impermium.com
   - DOMAIN-SUFFIX,itasoftware.com
@@ -582,8 +572,6 @@ payload:
   - DOMAIN-SUFFIX,jibemobile.com
   - DOMAIN-SUFFIX,kaggle.com
   - DOMAIN-SUFFIX,kaggle.io
-  - DOMAIN-SUFFIX,kaggle.net
-  - DOMAIN-SUFFIX,kaggleusercontent.com
   - DOMAIN-SUFFIX,keyhole.com
   - DOMAIN-SUFFIX,keytransparency.com
   - DOMAIN-SUFFIX,keytransparency.foo
@@ -603,7 +591,6 @@ payload:
   - DOMAIN-SUFFIX,near.by
   - DOMAIN-SUFFIX,nest.com
   - DOMAIN-SUFFIX,neverware.com
-  - DOMAIN-SUFFIX,new.day
   - DOMAIN-SUFFIX,nomulus.foo
   - DOMAIN-SUFFIX,oasisfeng.com
   - DOMAIN-SUFFIX,oauthz.com
@@ -782,6 +769,7 @@ payload:
   - DOMAIN-SUFFIX,wide-youtube.l.google.com
   - DOMAIN-SUFFIX,withyoutube.com
   - DOMAIN-SUFFIX,youtu.be
+  - DOMAIN-SUFFIX,youtube
   - DOMAIN-SUFFIX,youtube-nocookie.com
   - DOMAIN-SUFFIX,youtube-ui.l.google.com
   - DOMAIN-SUFFIX,youtube.ae
