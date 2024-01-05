@@ -1,4 +1,5 @@
 payload:
+  - DOMAIN,api.swiftgram.app
   - DOMAIN-SUFFIX,comments.app
   - DOMAIN-SUFFIX,contest.com
   - DOMAIN-SUFFIX,graph.org
@@ -2567,6 +2568,7 @@ payload:
   - DOMAIN-SUFFIX,sssoou.com
   - DOMAIN-SUFFIX,epg.pw
   - DOMAIN-SUFFIX,hostloc.com
+  - DOMAIN-SUFFIX,elliottwave.com
   - DOMAIN-SUFFIX,xn--6nq44rc0n82k.com
   - DOMAIN-SUFFIX,xn--mes358aby2apfg.com
   - DOMAIN-SUFFIX,xn--4gq62f52gdss.com

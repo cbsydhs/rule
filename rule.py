@@ -20,7 +20,6 @@ def convert_list_to_yaml(list_filename, yaml_filename):
     
     with open(yaml_filename, 'w') as f:
         f.write('\n'.join(formatted_content))
-    # print(f"\n>>> {yaml_filename} has been updated. ")
 
 def save_to_file(texts, filename, merge_rlue=False):
     if merge_rlue:
@@ -32,7 +31,6 @@ def save_to_file(texts, filename, merge_rlue=False):
     
     with open(filename, "w", encoding="utf-8") as file:
         file.write("\n".join(texts))
-    # print(f"\n>>> {filename} has been updated.")
     
 def reformat_yaml(filename):
     with open(filename, 'r') as file:
