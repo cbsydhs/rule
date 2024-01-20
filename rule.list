@@ -1,8 +1,8 @@
 # NAME: Telegram
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:55:48
-# DOMAIN: 1
+# UPDATED: 2024-01-08 15:59:55
+# DOMAIN: 2
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 21
 # IP-ASN: 5
@@ -10,7 +10,8 @@
 # IP-CIDR6: 4
 # OR: 1
 # PROCESS-NAME: 3
-# TOTAL: 40
+# TOTAL: 41
+DOMAIN,api.imem.app
 DOMAIN,api.swiftgram.app
 DOMAIN-SUFFIX,comments.app
 DOMAIN-SUFFIX,contest.com
@@ -55,7 +56,7 @@ OR,((IP-ASN,44907,no-resolve),(IP-ASN,59930,no-resolve),(IP-ASN,62014,no-resolve
 # NAME: Google
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:52:32
+# UPDATED: 2024-01-08 15:57:03
 # DOMAIN-KEYWORD: 5
 # DOMAIN-SUFFIX: 711
 # IP-CIDR: 4
@@ -796,7 +797,7 @@ PROCESS-NAME,BackupandSync
 # NAME: YouTube
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:52:31
+# UPDATED: 2024-01-08 15:57:03
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 179
 # IP-CIDR: 2
@@ -997,7 +998,7 @@ USER-AGENT,com.google.ios.youtubemusic*
 # NAME: Twitter
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:55:50
+# UPDATED: 2024-01-08 15:59:56
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 25
 # IP-CIDR: 7
@@ -1039,7 +1040,7 @@ IP-CIDR,69.195.160.0/19,no-resolve
 # NAME: Microsoft
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:52:32
+# UPDATED: 2024-01-08 15:57:04
 # DOMAIN: 2
 # DOMAIN-KEYWORD: 4
 # DOMAIN-SUFFIX: 662
@@ -1723,7 +1724,7 @@ PROCESS-NAME,OneDriveUpdater
 # NAME: GitHub
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:52:32
+# UPDATED: 2024-01-08 15:57:04
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 29
 # TOTAL: 30
@@ -1761,7 +1762,7 @@ DOMAIN-KEYWORD,github
 # NAME: Python
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:57:20
+# UPDATED: 2024-01-08 16:01:07
 # DOMAIN-SUFFIX: 6
 # TOTAL: 6
 DOMAIN-SUFFIX,pycon.org
@@ -1774,7 +1775,7 @@ DOMAIN-SUFFIX,pythonhosted.org
 # NAME: Wikipedia
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:55:50
+# UPDATED: 2024-01-08 15:59:57
 # DOMAIN-SUFFIX: 12
 # TOTAL: 12
 DOMAIN-SUFFIX,mediawiki.org
@@ -1790,37 +1791,10 @@ DOMAIN-SUFFIX,wikiversity.org
 DOMAIN-SUFFIX,wikivoyage.org
 DOMAIN-SUFFIX,wiktionary.org
 
-# NAME: Wikimedia
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:57:18
-# DOMAIN-SUFFIX: 20
-# TOTAL: 20
-DOMAIN-SUFFIX,mediawiki.org
-DOMAIN-SUFFIX,toolforge.org
-DOMAIN-SUFFIX,w.wiki
-DOMAIN-SUFFIX,wikibooks.org
-DOMAIN-SUFFIX,wikidata.org
-DOMAIN-SUFFIX,wikileaks.org
-DOMAIN-SUFFIX,wikimedia.org
-DOMAIN-SUFFIX,wikimediacloud.org
-DOMAIN-SUFFIX,wikimediafoundation.org
-DOMAIN-SUFFIX,wikinews.org
-DOMAIN-SUFFIX,wikipedia.com
-DOMAIN-SUFFIX,wikipedia.org
-DOMAIN-SUFFIX,wikiquote.org
-DOMAIN-SUFFIX,wikisource.org
-DOMAIN-SUFFIX,wikiversity.org
-DOMAIN-SUFFIX,wikivoyage.org
-DOMAIN-SUFFIX,wiktionary.org
-DOMAIN-SUFFIX,wmcloud.org
-DOMAIN-SUFFIX,wmflabs.org
-DOMAIN-SUFFIX,wmfusercontent.org
-
 # NAME: Facebook
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:55:50
+# UPDATED: 2024-01-08 15:59:56
 # DOMAIN-KEYWORD: 2
 # DOMAIN-SUFFIX: 547
 # IP-ASN: 1
@@ -2403,7 +2377,7 @@ IP-ASN,32934,no-resolve
 # NAME: Whatsapp
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:55:52
+# UPDATED: 2024-01-08 15:59:58
 # DOMAIN: 1
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 13
@@ -2439,7 +2413,7 @@ IP-CIDR,54.242.0.0/15,no-resolve
 # NAME: Instagram
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:55:52
+# UPDATED: 2024-01-08 15:59:58
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 73
 # TOTAL: 74
@@ -2521,7 +2495,7 @@ DOMAIN-KEYWORD,instagram
 # NAME: Pixiv
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:57:15
+# UPDATED: 2024-01-08 16:01:03
 # DOMAIN-SUFFIX: 9
 # TOTAL: 9
 DOMAIN-SUFFIX,ads-pixiv.net
@@ -2537,7 +2511,7 @@ DOMAIN-SUFFIX,pximg.net
 # NAME: Discord
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:55:51
+# UPDATED: 2024-01-08 15:59:57
 # DOMAIN-SUFFIX: 28
 # TOTAL: 28
 DOMAIN-SUFFIX,airhorn.solutions
@@ -2572,7 +2546,7 @@ DOMAIN-SUFFIX,watchanimeattheoffice.com
 # NAME: Reddit
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:57:16
+# UPDATED: 2024-01-08 16:01:04
 # DOMAIN-SUFFIX: 8
 # TOTAL: 8
 DOMAIN-SUFFIX,redd.it
@@ -2587,7 +2561,7 @@ DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com
 # NAME: Twitch
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-12-14 16:57:17
+# UPDATED: 2024-01-08 16:01:05
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 8
 # IP-CIDR: 11
@@ -2620,7 +2594,7 @@ PROCESS-NAME,tv.twitch.android.app
 # NAME: PikPak
 # AUTHOR: tugepaopao
 # REPO: https://github.com/tugepaopao/Image-Storage
-# UPDATED: 2023-12-14 16:58:47
+# UPDATED: 2024-01-08 16:02:03
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 6
 # TOTAL: 7

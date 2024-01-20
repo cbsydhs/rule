@@ -1,4 +1,5 @@
 payload:
+  - DOMAIN,api.imem.app
   - DOMAIN,api.swiftgram.app
   - DOMAIN-SUFFIX,comments.app
   - DOMAIN-SUFFIX,contest.com
@@ -1695,26 +1696,6 @@ payload:
   - DOMAIN-SUFFIX,wikiversity.org
   - DOMAIN-SUFFIX,wikivoyage.org
   - DOMAIN-SUFFIX,wiktionary.org
-  - DOMAIN-SUFFIX,mediawiki.org
-  - DOMAIN-SUFFIX,toolforge.org
-  - DOMAIN-SUFFIX,w.wiki
-  - DOMAIN-SUFFIX,wikibooks.org
-  - DOMAIN-SUFFIX,wikidata.org
-  - DOMAIN-SUFFIX,wikileaks.org
-  - DOMAIN-SUFFIX,wikimedia.org
-  - DOMAIN-SUFFIX,wikimediacloud.org
-  - DOMAIN-SUFFIX,wikimediafoundation.org
-  - DOMAIN-SUFFIX,wikinews.org
-  - DOMAIN-SUFFIX,wikipedia.com
-  - DOMAIN-SUFFIX,wikipedia.org
-  - DOMAIN-SUFFIX,wikiquote.org
-  - DOMAIN-SUFFIX,wikisource.org
-  - DOMAIN-SUFFIX,wikiversity.org
-  - DOMAIN-SUFFIX,wikivoyage.org
-  - DOMAIN-SUFFIX,wiktionary.org
-  - DOMAIN-SUFFIX,wmcloud.org
-  - DOMAIN-SUFFIX,wmflabs.org
-  - DOMAIN-SUFFIX,wmfusercontent.org
   - DOMAIN-SUFFIX,aboutfacebook.com
   - DOMAIN-SUFFIX,accessfacebookfromschool.com
   - DOMAIN-SUFFIX,accountkit.com
@@ -2514,33 +2495,33 @@ payload:
   - DOMAIN-KEYWORD,steambroadcast
   - DOMAIN-KEYWORD,steamstore
   - DOMAIN-KEYWORD,steamuserimages
-  - DOMAIN-SUFFIX,err.sh
-  - DOMAIN-SUFFIX,hyper.is
-  - DOMAIN-SUFFIX,nextjs.org
-  - DOMAIN-SUFFIX,now.sh
-  - DOMAIN-SUFFIX,static.fun
-  - DOMAIN-SUFFIX,title.sh
-  - DOMAIN-SUFFIX,turborepo.org
-  - DOMAIN-SUFFIX,vercel-analytics.com
-  - DOMAIN-SUFFIX,vercel-dns.com
-  - DOMAIN-SUFFIX,vercel-insights.com
-  - DOMAIN-SUFFIX,vercel-status.com
-  - DOMAIN-SUFFIX,vercel.app
-  - DOMAIN-SUFFIX,vercel.blog
-  - DOMAIN-SUFFIX,vercel.com
-  - DOMAIN-SUFFIX,vercel.events
-  - DOMAIN-SUFFIX,vercel.link
-  - DOMAIN-SUFFIX,vercel.live
-  - DOMAIN-SUFFIX,vercel.pub
-  - DOMAIN-SUFFIX,vercel.sh
-  - DOMAIN-SUFFIX,vercel.store
-  - DOMAIN-SUFFIX,zeit-world.co.uk
-  - DOMAIN-SUFFIX,zeit-world.com
-  - DOMAIN-SUFFIX,zeit-world.net
-  - DOMAIN-SUFFIX,zeit-world.org
-  - DOMAIN-SUFFIX,zeit.co
-  - DOMAIN-SUFFIX,zeit.sh
-  - DOMAIN-SUFFIX,zeitworld.com
+  - DOMAIN,lf16-effectcdn.byteeffecttos-g.com
+  - DOMAIN,lf16-pkgcdn.pitaya-clientai.com
+  - DOMAIN,p16-tiktokcdn-com.akamaized.net
+  - DOMAIN-SUFFIX,bytedapm.com
+  - DOMAIN-SUFFIX,bytegecko-i18n.com
+  - DOMAIN-SUFFIX,bytegecko.com
+  - DOMAIN-SUFFIX,byteoversea.com
+  - DOMAIN-SUFFIX,capcut.com
+  - DOMAIN-SUFFIX,ibytedtos.com
+  - DOMAIN-SUFFIX,ibyteimg.com
+  - DOMAIN-SUFFIX,ipstatp.com
+  - DOMAIN-SUFFIX,isnssdk.com
+  - DOMAIN-SUFFIX,muscdn.com
+  - DOMAIN-SUFFIX,musical.ly
+  - DOMAIN-SUFFIX,sgpstatp.com
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-SUFFIX,tik-tokapi.com
+  - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,tiktokcdn-us.com
+  - DOMAIN-SUFFIX,tiktokcdn.com
+  - DOMAIN-SUFFIX,tiktokd.net
+  - DOMAIN-SUFFIX,tiktokd.org
+  - DOMAIN-SUFFIX,tiktokmusic.app
+  - DOMAIN-SUFFIX,tiktokv.com
+  - DOMAIN-KEYWORD,musical.ly
+  - DOMAIN-KEYWORD,tiktok
+  - PROCESS-NAME,com.zhiliaoapp.musically
   - DOMAIN-KEYWORD,pornhub
   - DOMAIN-KEYWORD,xvideos
   - DOMAIN-SUFFIX,archive.org
