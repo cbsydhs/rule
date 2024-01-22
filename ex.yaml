@@ -18,7 +18,6 @@ payload:
   - DOMAIN-SUFFIX,metamask.io
   - DOMAIN-SUFFIX,coingecko.com
   - DOMAIN-SUFFIX,tradingview.com
-  - DOMAIN-KEYWORD,licdn
   - DOMAIN-SUFFIX,linkedin.com
   - DOMAIN-SUFFIX,vimeo.com
   - DOMAIN-SUFFIX,nvidia.com
