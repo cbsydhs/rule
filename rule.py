@@ -11,27 +11,13 @@ def fetch_from_urls(url_list):
             print(f"Unable to retrieve data from URL {url}")
     return texts
 
-def convert_list_to_yaml(list_filename, yaml_filename):
-    with open(list_filename, 'r') as f:
-        original_content = f.readlines()
-    cleaned_content = [line.strip() for line in original_content if not line.startswith('#') and line.strip()]
-    cleaned_content.insert(0, 'payload:')
-    formatted_content = [cleaned_content[0]] + ['  - ' + line for line in cleaned_content[1:]]
-    
-    with open(yaml_filename, 'w') as f:
-        f.write('\n'.join(formatted_content))
+def convert_list_to_yaml(list_filename):
+    yaml_filename = os.path.splitext(list_filename)[0] + '.yaml'
 
-def save_to_file(texts, filename, merge_rlue=False):
-    if merge_rlue:
-        if filename == "rule.yaml":
-            convert_list_to_yaml("ex.list", "ex.yaml")
-        with open(f"ex.{os.path.splitext(filename)[1][1:]}", "r", encoding="utf-8") as local_file:
-            local_text = local_file.read()
-            texts.append(local_text)
-    
-    with open(filename, "w", encoding="utf-8") as file:
-        file.write("\n".join(texts))
-    
+    with open(list_filename, 'r') as list_file, open(yaml_filename, 'w') as yaml_file:
+        cleaned_content = ['  - ' + line.strip() for line in list_file if not line.startswith('#') and line.strip()]
+        yaml_file.write('payload:\n' + '\n'.join(cleaned_content))
+
 def reformat_yaml(filename):
     with open(filename, 'r') as file:
         lines = file.readlines()
@@ -46,28 +32,31 @@ def reformat_yaml(filename):
         for line in lines:
             file.write(line + "\n")
 
-def process_urls_to_list(url_list, output_list_filename):
+def process_urls_to_file(url_list):
     texts = fetch_from_urls(url_list)
+    filename = url_list
+    convert_list_to_yaml("ex.list")
 
-    merge_rlue = url_list == surge_rule
-    save_to_file(texts, output_list_filename, merge_rlue)
+    if filename.startswith('clash'):
+        with open("ex.yaml}", "r", encoding="utf-8") as local_file:
+            local_text = local_file.read()
+            texts.append(local_text)
+        filename += '.yaml'
+        reformat_yaml(filename)
+    else:
+        with open("ex.list}", "r", encoding="utf-8") as local_file:
+            local_text = local_file.read()
+            texts.append(local_text)
+        filename += '.list'
 
-    print(f"\n>>> √    {output_list_filename}")
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write("\n".join(texts))
 
-def process_urls_to_yaml(url_list, output_yaml_filename):
-    texts = fetch_from_urls(url_list)
-
-    merge_rlue = url_list == clash_rule
-    save_to_file(texts, output_yaml_filename, merge_rlue)
-
-    reformat_yaml(output_yaml_filename)
-
-    print(f"\n>>> √    {output_yaml_filename}")
-
+    print(f"\n>>> √    {filename}")
 
 if __name__ == "__main__":
 
-    surge_rule = [
+    rule = [
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list",
@@ -76,6 +65,7 @@ if __name__ == "__main__":
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Python/Python.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikipedia/Wikipedia.list",
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikimedia/Wikimedia.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list",
@@ -84,15 +74,48 @@ if __name__ == "__main__":
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Reddit/Reddit.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitch/Twitch.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PikPak/PikPak.list",
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list"
     ]
 
-    surge_ai_rlue = [
+    rule_x = [
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list"
     ]
 
-    clash_rule = [
+    rules = [
+        "DOMAIN-KEYWORD,pornhub",
+        "DOMAIN-KEYWORD,xvideos",
+        "DOMAIN-SUFFIX,archive.org",
+        "DOMAIN-SUFFIX,beehiiv.com",
+        "DOMAIN-SUFFIX,newsminimalist.com",
+        "DOMAIN-SUFFIX,theverge.com",
+        "DOMAIN-SUFFIX,rsshub.app",
+        "DOMAIN-SUFFIX,ycombinator.com",
+        "DOMAIN-SUFFIX,bloomberg.com",
+        "DOMAIN-SUFFIX,engadget.com",
+        "DOMAIN-SUFFIX,ipfs.io",
+        "DOMAIN-SUFFIX,binance.org",
+        "DOMAIN-SUFFIX,uniswap.org",
+        "DOMAIN-SUFFIX,infura.io",
+        "DOMAIN-SUFFIX,opensea.io",
+        "DOMAIN-SUFFIX,metamask.io",
+        "DOMAIN-SUFFIX,coingecko.com",
+        "DOMAIN-SUFFIX,linkedin.com",
+        "DOMAIN-SUFFIX,unsplash.com",
+        "DOMAIN-SUFFIX,epg.pw",
+        "DOMAIN-SUFFIX,hostloc.com",
+        "DOMAIN-SUFFIX,elliottwave.com",
+        "DOMAIN-SUFFIX,xn--6nq44rc0n82k.com",
+        "DOMAIN-SUFFIX,xn--mes358aby2apfg.com",
+        "DOMAIN-SUFFIX,xn--4gq62f52gdss.com",
+        "DOMAIN-SUFFIX,nanoport.xyz",
+        "DOMAIN-SUFFIX,pqjc.site"
+    ]
+
+    rules_x = [
+        "DOMAIN-SUFFIX,tradingview.com"
+    ]
+
+    clash = [
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml",
@@ -101,6 +124,7 @@ if __name__ == "__main__":
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Python/Python.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml",
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikimedia/Wikimedia.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml",
@@ -109,19 +133,22 @@ if __name__ == "__main__":
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitch/Twitch.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PikPak/PikPak.yaml",
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml"
     ]
 
-    clash_ai_rlue = [
+    clash_ai = [
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
     ]
 
     print("\nCheck for Updates...")
-
-    process_urls_to_list(surge_rule, "rule.list")
-    process_urls_to_list(surge_ai_rlue, "rule-ai.list")
-    process_urls_to_yaml(clash_rule, "rule.yaml")
-    process_urls_to_yaml(clash_ai_rlue, "rule-ai.yaml")
+  
+    process_urls_to_file(rule)
+    process_urls_to_file(rule_x)
+    process_urls_to_file(clash)
+    process_urls_to_file(clash_ai)
 
     input("\nPress Enter to exit...")
+
+
+
+
