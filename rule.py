@@ -10,10 +10,16 @@ def fetch_from_urls(url_list):
             print(f"Unable to retrieve data from URL {url}")
     return '\n'.join(texts)
 
-def generate_rule_file(rule):
+def generate_rule_file(rule, format_type):
     for rule_name, info in rule.items():
-        rules = fetch_from_urls(info["urls"]) + "\n" + '\n'.join(info["ex"])
-        filename = f"{rule_name}.list"
+        if format_type == "yaml":
+            rules = fetch_from_urls(info["urls_yaml"]) + "\n" + '\n'.join(f"  - {item}" for item in info["ex"])
+            lines = [line.strip() for line in rules.split('\n') if line.strip() and not line.startswith("#") and line.strip() != "payload:"]
+            rules = "payload:\n  " + "\n  ".join(lines)
+            filename = f"{rule_name}.yaml"
+        else:
+            rules = fetch_from_urls(info["urls_list"]) + "\n" + '\n'.join(info["ex"])
+            filename = f"{rule_name}.list"
     
         with open(filename, "w") as f:
             f.write(rules)
@@ -24,7 +30,7 @@ if __name__ == "__main__":
 
     rule = {
         "rule" : {
-            "urls" : [
+            "urls_list" : [
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list",
@@ -42,6 +48,24 @@ if __name__ == "__main__":
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Reddit/Reddit.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitch/Twitch.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PikPak/PikPak.list"
+            ],
+            "urls_yaml" : [
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Python/Python.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitch/Twitch.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PikPak/PikPak.yaml"
             ],
 
             "ex" : [
@@ -77,9 +101,13 @@ if __name__ == "__main__":
         },
 
         "x" : {
-            "urls" : [
+            "urls_list" : [
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list"
+            ],
+            "urls_yaml" : [
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
             ],
 
             "ex" : [
@@ -90,7 +118,8 @@ if __name__ == "__main__":
 
 
     print("\nCheck for Updates...")
- 
-    generate_rule_file(rule)
+    
+    generate_rule_file(rule, format_type="list")
+    generate_rule_file(rule, format_type="yaml")
     
     input("\nPress Enter to exit...")
