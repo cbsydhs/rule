@@ -110,7 +110,9 @@ if __name__ == "__main__":
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
             ],
 
-            "ex" : []
+            "ex" : [
+                "DOMAIN-SUFFIX,perplexity.ai"
+            ]
         }
     }
 
