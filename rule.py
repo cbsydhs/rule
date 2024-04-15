@@ -69,8 +69,12 @@ if __name__ == "__main__":
             ],
 
             "ex" : [
-                "DOMAIN-KEYWORD,pornhub",
-                "DOMAIN-KEYWORD,xvideos",
+                "DOMAIN-SUFFIX,tradingview.com",
+                "DOMAIN-SUFFIX,metamask.io",
+                "DOMAIN-SUFFIX,coingecko.com",
+                "DOMAIN-SUFFIX,linkedin.com",
+                "DOMAIN-SUFFIX,unsplash.com",
+                "DOMAIN-SUFFIX,perplexity.ai"
                 "DOMAIN-SUFFIX,archive.org",
                 "DOMAIN-SUFFIX,beehiiv.com",
                 "DOMAIN-SUFFIX,newsminimalist.com",
@@ -84,11 +88,6 @@ if __name__ == "__main__":
                 "DOMAIN-SUFFIX,uniswap.org",
                 "DOMAIN-SUFFIX,infura.io",
                 "DOMAIN-SUFFIX,opensea.io",
-                "DOMAIN-SUFFIX,tradingview.com",
-                "DOMAIN-SUFFIX,metamask.io",
-                "DOMAIN-SUFFIX,coingecko.com",
-                "DOMAIN-SUFFIX,linkedin.com",
-                "DOMAIN-SUFFIX,unsplash.com",
                 "DOMAIN-SUFFIX,epg.pw",
                 "DOMAIN-SUFFIX,hostloc.com",
                 "DOMAIN-SUFFIX,elliottwave.com",
@@ -96,7 +95,7 @@ if __name__ == "__main__":
                 "DOMAIN-SUFFIX,xn--mes358aby2apfg.com",
                 "DOMAIN-SUFFIX,xn--4gq62f52gdss.com",
                 "DOMAIN-SUFFIX,nanoport.xyz",
-                "DOMAIN-SUFFIX,pqjc.sit"
+                "DOMAIN-SUFFIX,pqjc.sit",
             ]
         },
 
@@ -110,9 +109,7 @@ if __name__ == "__main__":
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
             ],
 
-            "ex" : [
-                "DOMAIN-SUFFIX,perplexity.ai"
-            ]
+            "ex" : []
         }
     }
 

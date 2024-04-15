@@ -2356,9 +2356,12 @@ payload:
   - DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net
   - DOMAIN-SUFFIX,hubciddata.sandai.net
   - DOMAIN-KEYWORD,mypikpak
-  - DOMAIN-KEYWORD,pornhub
-  - DOMAIN-KEYWORD,xvideos
-  - DOMAIN-SUFFIX,archive.org
+  - DOMAIN-SUFFIX,tradingview.com
+  - DOMAIN-SUFFIX,metamask.io
+  - DOMAIN-SUFFIX,coingecko.com
+  - DOMAIN-SUFFIX,linkedin.com
+  - DOMAIN-SUFFIX,unsplash.com
+  - DOMAIN-SUFFIX,perplexity.aiDOMAIN-SUFFIX,archive.org
   - DOMAIN-SUFFIX,beehiiv.com
   - DOMAIN-SUFFIX,newsminimalist.com
   - DOMAIN-SUFFIX,theverge.com
@@ -2371,11 +2374,6 @@ payload:
   - DOMAIN-SUFFIX,uniswap.org
   - DOMAIN-SUFFIX,infura.io
   - DOMAIN-SUFFIX,opensea.io
-  - DOMAIN-SUFFIX,tradingview.com
-  - DOMAIN-SUFFIX,metamask.io
-  - DOMAIN-SUFFIX,coingecko.com
-  - DOMAIN-SUFFIX,linkedin.com
-  - DOMAIN-SUFFIX,unsplash.com
   - DOMAIN-SUFFIX,epg.pw
   - DOMAIN-SUFFIX,hostloc.com
   - DOMAIN-SUFFIX,elliottwave.com
