@@ -74,7 +74,6 @@ if __name__ == "__main__":
                 "DOMAIN-SUFFIX,coingecko.com",
                 "DOMAIN-SUFFIX,linkedin.com",
                 "DOMAIN-SUFFIX,unsplash.com",
-                "DOMAIN-SUFFIX,perplexity.ai"
                 "DOMAIN-SUFFIX,archive.org",
                 "DOMAIN-SUFFIX,beehiiv.com",
                 "DOMAIN-SUFFIX,newsminimalist.com",
@@ -109,7 +108,10 @@ if __name__ == "__main__":
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
             ],
 
-            "ex" : []
+            "ex" : [
+                "DOMAIN-SUFFIX,perplexity.ai",
+                "DOMAIN-SUFFIX,huggingface.co",
+            ]
         }
     }
 

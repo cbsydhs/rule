@@ -2361,7 +2361,7 @@ payload:
   - DOMAIN-SUFFIX,coingecko.com
   - DOMAIN-SUFFIX,linkedin.com
   - DOMAIN-SUFFIX,unsplash.com
-  - DOMAIN-SUFFIX,perplexity.aiDOMAIN-SUFFIX,archive.org
+  - DOMAIN-SUFFIX,archive.org
   - DOMAIN-SUFFIX,beehiiv.com
   - DOMAIN-SUFFIX,newsminimalist.com
   - DOMAIN-SUFFIX,theverge.com
