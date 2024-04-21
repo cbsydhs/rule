@@ -48,5 +48,6 @@ DOMAIN,cdn.usefathom.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 
-DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,perplexity.ai
