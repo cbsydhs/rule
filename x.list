@@ -1,13 +1,13 @@
 # NAME: OpenAI
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-03-31 02:13:21
+# UPDATED: 2024-04-29 13:37:07
 # DOMAIN: 2
 # DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 22
+# DOMAIN-SUFFIX: 21
 # IP-ASN: 1
 # IP-CIDR: 2
-# TOTAL: 28
+# TOTAL: 27
 DOMAIN,browser-intake-datadoghq.com
 DOMAIN,static.cloudflareinsights.com
 DOMAIN-SUFFIX,ai.com
@@ -27,7 +27,6 @@ DOMAIN-SUFFIX,launchdarkly.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,observeit.net
-DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
@@ -40,7 +39,7 @@ IP-ASN,20473,no-resolve
 # NAME: Claude
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-02-25 16:06:05
+# UPDATED: 2024-04-29 13:37:08
 # DOMAIN: 1
 # DOMAIN-SUFFIX: 2
 # TOTAL: 3
@@ -49,7 +48,9 @@ DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 
 DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,ai.google.dev
 DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,huggingface.co
 DOMAIN-SUFFIX,perplexity.ai
