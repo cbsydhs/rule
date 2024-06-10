@@ -110,6 +110,7 @@ if __name__ == "__main__":
 
             "ex" : [
                 "DOMAIN-SUFFIX,gemini.google.com",
+                "DOMAIN-SUFFIX,notebooklm.google",
                 "DOMAIN-SUFFIX,apis.google.com",
                 "DOMAIN-SUFFIX,ai.google.dev",
                 "DOMAIN-SUFFIX,aistudio.google.com",
