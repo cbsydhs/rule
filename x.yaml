@@ -34,11 +34,11 @@ payload:
   - DOMAIN-KEYWORD,openai
   - IP-CIDR,24.199.123.28/32
   - IP-CIDR,64.23.132.171/32
-  - IP-ASN,20473
   - DOMAIN,cdn.usefathom.com
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,claude.ai
   - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,notebooklm.google
   - DOMAIN-SUFFIX,apis.google.com
   - DOMAIN-SUFFIX,ai.google.dev
   - DOMAIN-SUFFIX,aistudio.google.com
