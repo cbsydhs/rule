@@ -5,6 +5,7 @@
 # DOMAIN: 8
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 24
+# IP-ASN: 1
 # IP-CIDR: 2
 # TOTAL: 36
 DOMAIN,browser-intake-datadoghq.com
@@ -42,6 +43,7 @@ DOMAIN-SUFFIX,turn.livekit.cloud
 DOMAIN-KEYWORD,openai
 IP-CIDR,24.199.123.28/32,no-resolve
 IP-CIDR,64.23.132.171/32,no-resolve
+IP-ASN,20473,no-resolve
 
 # NAME: Claude
 # AUTHOR: blackmatrix7

@@ -79,7 +79,6 @@ if __name__ == "__main__":
                 "DOMAIN-SUFFIX,ipfs.io",
                 "DOMAIN-SUFFIX,binance.org",
                 "DOMAIN-SUFFIX,uniswap.org",
-                "DOMAIN-SUFFIX,infura.io",
                 "DOMAIN-SUFFIX,opensea.io",
                 "DOMAIN-SUFFIX,elliottwave.com",
                 "DOMAIN-SUFFIX,xn--6nq44rc0n82k.com",

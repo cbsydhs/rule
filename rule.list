@@ -5,6 +5,7 @@
 # DOMAIN: 2
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 22
+# IP-ASN: 5
 # IP-CIDR: 4
 # IP-CIDR6: 4
 # OR: 1
@@ -43,9 +44,15 @@ IP-CIDR6,2001:67c:4e8::/48,no-resolve
 IP-CIDR6,2001:b28:f23c::/47,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
 IP-CIDR6,2a0a:f280::/29,no-resolve
+IP-ASN,211157,no-resolve
+IP-ASN,44907,no-resolve
+IP-ASN,59930,no-resolve
+IP-ASN,62014,no-resolve
+IP-ASN,62041,no-resolve
 PROCESS-NAME,nekox.messenger
 PROCESS-NAME,org.telegram.messenger
 PROCESS-NAME,telegram-desktop
+OR,((IP-ASN,44907,no-resolve),(IP-ASN,59930,no-resolve),(IP-ASN,62014,no-resolve),(IP-ASN,62041,no-resolve),(IP-ASN,211157,no-resolve))
 
 # NAME: Google
 # AUTHOR: blackmatrix7
@@ -1815,6 +1822,7 @@ DOMAIN-SUFFIX,wmfusercontent.org
 # UPDATED: 2024-07-03 16:16:10
 # DOMAIN-KEYWORD: 2
 # DOMAIN-SUFFIX: 544
+# IP-ASN: 1
 # IP-CIDR: 23
 # TOTAL: 570
 DOMAIN-SUFFIX,aboutfacebook.com
@@ -2386,6 +2394,7 @@ IP-CIDR,54.162.243.80/32,no-resolve
 IP-CIDR,54.173.34.141/32,no-resolve
 IP-CIDR,54.235.23.242/32,no-resolve
 IP-CIDR,54.93.124.31/32,no-resolve
+IP-ASN,32934,no-resolve
 
 # NAME: Whatsapp
 # AUTHOR: blackmatrix7
@@ -2549,7 +2558,6 @@ DOMAIN-SUFFIX,ycombinator.com
 DOMAIN-SUFFIX,ipfs.io
 DOMAIN-SUFFIX,binance.org
 DOMAIN-SUFFIX,uniswap.org
-DOMAIN-SUFFIX,infura.io
 DOMAIN-SUFFIX,opensea.io
 DOMAIN-SUFFIX,elliottwave.com
 DOMAIN-SUFFIX,xn--6nq44rc0n82k.com
