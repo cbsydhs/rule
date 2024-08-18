@@ -39,7 +39,6 @@ if __name__ == "__main__":
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Python/Python.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikipedia/Wikipedia.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikimedia/Wikimedia.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list",
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list",
@@ -81,9 +80,6 @@ if __name__ == "__main__":
                 "DOMAIN-SUFFIX,uniswap.org",
                 "DOMAIN-SUFFIX,opensea.io",
                 "DOMAIN-SUFFIX,elliottwave.com",
-                "DOMAIN-SUFFIX,xn--6nq44rc0n82k.com",
-                "DOMAIN-SUFFIX,xn--mes358aby2apfg.com",
-                "DOMAIN-SUFFIX,xn--4gq62f52gdss.com",
                 "DOMAIN-SUFFIX,nanoport.xyz",
                 "DOMAIN-SUFFIX,pqjc.sit",
             ]
