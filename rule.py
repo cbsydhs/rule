@@ -64,19 +64,21 @@ if __name__ == "__main__":
             "ex" : [
                 "DOMAIN-SUFFIX,tradingview.com",
                 "DOMAIN-SUFFIX,linkedin.com",
-                "DOMAIN-SUFFIX,elliottwave.com",
-                "DOMAIN-SUFFIX,pqjc.sit"
+                "DOMAIN-SUFFIX,elliottwave.com"
             ]
         },
 
         "x" : {
             "urls_list" : [
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list"
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Copilot/Copilot.list"
+                
             ],
             "urls_yaml" : [
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml",
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml"
             ],
 
             "ex" : [
