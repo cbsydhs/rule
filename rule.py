@@ -64,7 +64,10 @@ if __name__ == "__main__":
             "ex" : [
                 "DOMAIN-SUFFIX,tradingview.com",
                 "DOMAIN-SUFFIX,linkedin.com",
-                "DOMAIN-SUFFIX,elliottwave.com"
+                "DOMAIN-SUFFIX,elliottwave.com",
+                "DOMAIN-SUFFIX,figma.com",
+                "DOMAIN-SUFFIX,coze.com"
+
             ]
         },
 
