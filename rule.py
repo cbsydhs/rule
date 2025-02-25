@@ -66,8 +66,6 @@ if __name__ == "__main__":
                 "DOMAIN-SUFFIX,linkedin.com",
                 "DOMAIN-SUFFIX,elliottwave.com",
                 "DOMAIN-SUFFIX,figma.com",
-                "DOMAIN-SUFFIX,coze.com"
-
             ]
         },
 
@@ -87,6 +85,8 @@ if __name__ == "__main__":
             "ex" : [
                 "DOMAIN-SUFFIX,huggingface.co",
                 "DOMAIN-SUFFIX,perplexity.ai"
+                "DOMAIN-SUFFIX,x.ai"
+                "DOMAIN-SUFFIX,coze.com"
             ]
         }
     }
