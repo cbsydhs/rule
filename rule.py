@@ -84,8 +84,8 @@ if __name__ == "__main__":
 
             "ex" : [
                 "DOMAIN-SUFFIX,huggingface.co",
-                "DOMAIN-SUFFIX,perplexity.ai"
-                "DOMAIN-SUFFIX,x.ai"
+                "DOMAIN-SUFFIX,perplexity.ai",
+                "DOMAIN-SUFFIX,x.ai",
                 "DOMAIN-SUFFIX,coze.com"
             ]
         }

@@ -119,4 +119,6 @@ IP-ASN,14061,no-resolve
 IP-ASN,20473,no-resolve
 
 DOMAIN-SUFFIX,huggingface.co
-DOMAIN-SUFFIX,perplexity.aiDOMAIN-SUFFIX,x.aiDOMAIN-SUFFIX,coze.com
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,coze.com
