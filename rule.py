@@ -1,100 +1,93 @@
 import requests
 
-def fetch_from_urls(url_list):
+SURGE_BASE = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/{name}/{name}.list"
+CLASH_BASE = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/{name}/{name}.yaml"
+
+RULES_CONFIG = {
+    "rule": {
+        "names": [
+            "Google", "YouTube", "Twitter", "Microsoft", "GitHub", "Python", "Telegram",
+            "Wikipedia", "Facebook", "Whatsapp", "Instagram", "Pixiv", "Discord", "Reddit"
+        ],
+        "suffix": [
+            "tradingview.com",
+            "linkedin.com",
+            "elliottwave.com",
+            "figma.com",
+            "twinfoo.com",
+            "z-library.sk",
+            "v2ex.com",
+            "pqjc.site",
+            "xn--mes358aby2apfg.com",
+            "xn--9kqz23b19z.com",
+            "xmac.app",
+            "vk.com",
+            "userapi.com"
+        ],
+        "keyword": [
+            "yourware",
+            "macked"
+        ]
+    },
+    "x": {
+        "names": [
+            "OpenAI", "Claude", "Copilot", "Gemini"
+        ],
+        "suffix": [
+            "huggingface.co",
+            "perplexity.ai",
+            "pplx.ai",
+            "x.ai",
+            "coze.com"
+        ],
+        "keyword": []
+    }
+}
+
+def fetch_from_urls(urls):
     texts = []
-    for url in url_list:
-        response = requests.get(url)
-        if response.status_code == 200:
-            texts.append(response.text)
-        else:
-            print(f"Unable to retrieve data from URL {url}")
+    for url in urls:
+        try:
+            resp = requests.get(url, timeout=10)
+            resp.raise_for_status()
+            texts.append(resp.text)
+        except Exception as e:
+            print(f"Failed: {url} ({e})")
     return '\n'.join(texts)
 
-def generate_rule_file(rule, format_type):
-    for rule_name, info in rule.items():
-        if format_type == "yaml":
-            rules = fetch_from_urls(info["urls_yaml"]) + "\n" + '\n'.join(f"  - {item}" for item in info["ex"])
-            lines = [line.strip() for line in rules.split('\n') if line.strip() and not line.startswith("#") and line.strip() != "payload:"]
-            rules = "payload:\n  " + "\n  ".join(lines)
-            filename = f"{rule_name}.yaml"
-        else:
-            rules = fetch_from_urls(info["urls_list"]) + "\n" + '\n'.join(info["ex"])
-            filename = f"{rule_name}.list"
-    
-        with open(filename, "w") as f:
-            f.write(rules)
+def build_urls(names, base):
+    return [base.format(name=n) for n in names]
 
-        print(f"\n>>> √    {filename}")
+def build_ex(suffixes, keywords):
+    ex = []
+    ex += [f"DOMAIN-SUFFIX,{d}" for d in suffixes]
+    ex += [f"DOMAIN-KEYWORD,{k}" for k in keywords]
+    return ex
+
+def format_rules(info, fmt):
+    urls = build_urls(info["names"], CLASH_BASE if fmt == "yaml" else SURGE_BASE)
+    content = fetch_from_urls(urls)
+    extra = build_ex(info.get("suffix", []), info.get("keyword", []))
+    if fmt == "yaml":
+        lines = [
+            line.strip() for line in (content + '\n' + '\n'.join(extra)).split('\n')
+            if line.strip() and not line.lstrip().startswith("#") and line.strip() != "payload:"
+        ]
+        return "payload:\n  " + "\n  ".join(lines)
+    else:
+        return content + '\n' + '\n'.join(extra)
+
+def generate_rule_files(rules_config, fmt):
+    ext = "yaml" if fmt == "yaml" else "list"
+    for name, info in rules_config.items():
+        text = format_rules(info, fmt)
+        filename = f"{name}.{ext}"
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(text)
+        print(f"\033[92m✔\033[0m \033[1m{filename}\033[0m")
 
 if __name__ == "__main__":
-
-    rule = {
-        "rule" : {
-            "urls_list" : [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Python/Python.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikipedia/Wikipedia.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pixiv/Pixiv.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list",
-            ],
-            "urls_yaml" : [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Python/Python.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml",
-            ],
-
-            "ex" : [
-                "DOMAIN-SUFFIX,tradingview.com",
-                "DOMAIN-SUFFIX,linkedin.com",
-                "DOMAIN-SUFFIX,elliottwave.com",
-                "DOMAIN-SUFFIX,figma.com",
-            ]
-        },
-
-        "x" : {
-            "urls_list" : [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Copilot/Copilot.list"
-                
-            ],
-            "urls_yaml" : [
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml",
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml"
-            ],
-
-            "ex" : [
-                "DOMAIN-SUFFIX,huggingface.co",
-                "DOMAIN-SUFFIX,perplexity.ai",
-                "DOMAIN-SUFFIX,x.ai",
-                "DOMAIN-SUFFIX,coze.com"
-            ]
-        }
-    }
-
-
-    print("\nCheck for Updates...")
-    
-    generate_rule_file(rule, format_type="list")
-    generate_rule_file(rule, format_type="yaml")
-    
-    input("\nPress Enter to exit...")
+    print("Check for Updates...")
+    for fmt in ("list", "yaml"):
+        generate_rule_files(RULES_CONFIG, fmt)
+    input("Press Enter to exit...")
