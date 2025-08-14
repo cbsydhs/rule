@@ -2326,5 +2326,6 @@ payload:
   - DOMAIN-SUFFIX,xmac.app
   - DOMAIN-SUFFIX,vk.com
   - DOMAIN-SUFFIX,userapi.com
+  - DOMAIN-SUFFIX,cbsydhs.com
   - DOMAIN-KEYWORD,yourware
   - DOMAIN-KEYWORD,macked
