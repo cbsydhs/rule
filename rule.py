@@ -17,7 +17,7 @@ RULES_CONFIG = {
             "tradingview.com", "linkedin.com", "elliottwave.com", "figma.com",
             "twinfoo.com", "z-library.sk", "v2ex.com", "pqjc.site",
             "xn--mes358aby2apfg.com", "xn--9kqz23b19z.com", "xmac.app",
-            "vk.com", "userapi.com","cbsydhs.com"
+            "vk.com", "userapi.com"
         ],
         "keyword": ["yourware", "macked"]
     },
