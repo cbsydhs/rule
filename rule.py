@@ -67,14 +67,17 @@ def build_ex(suffixes, keywords):
 def format_rules(info, fmt):
     urls = build_urls(info["names"], CLASH_BASE if fmt == "yaml" else SURGE_BASE)
     content = fetch_from_urls(urls)
-    extra = build_ex(info.get("suffix", []), info.get("keyword", []))
     if fmt == "yaml":
+        extra_rules = build_ex(info.get("suffix", []), info.get("keyword", []))
+        # Combine remote content with local rules, ensuring local rules are formatted for YAML lists.
+        all_rules_text = content + '\n' + '\n'.join([f"- {rule}" for rule in extra_rules])
         lines = [
-            line.strip() for line in (content + '\n' + '\n'.join(extra)).split('\n')
-            if line.strip() and not line.lstrip().startswith("#") and line.strip() != "payload:"
+            line.strip() for line in all_rules_text.split('\n')
+            if line.strip() and not line.lstrip().startswith("#") and line.strip() != "payload:" and not line.strip().startswith("- IP-ASN")
         ]
         return "payload:\n  " + "\n  ".join(lines)
     else:
+        extra = build_ex(info.get("suffix", []), info.get("keyword", []))
         return content + '\n' + '\n'.join(extra)
 
 def generate_rule_files(rules_config, fmt):

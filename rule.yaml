@@ -2313,18 +2313,18 @@ payload:
   - DOMAIN-SUFFIX,reddituploads.com
   - DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net
   - DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com
-  DOMAIN-SUFFIX,tradingview.com
-  DOMAIN-SUFFIX,linkedin.com
-  DOMAIN-SUFFIX,elliottwave.com
-  DOMAIN-SUFFIX,figma.com
-  DOMAIN-SUFFIX,twinfoo.com
-  DOMAIN-SUFFIX,z-library.sk
-  DOMAIN-SUFFIX,v2ex.com
-  DOMAIN-SUFFIX,pqjc.site
-  DOMAIN-SUFFIX,xn--mes358aby2apfg.com
-  DOMAIN-SUFFIX,xn--9kqz23b19z.com
-  DOMAIN-SUFFIX,xmac.app
-  DOMAIN-SUFFIX,vk.com
-  DOMAIN-SUFFIX,userapi.com
-  DOMAIN-KEYWORD,yourware
-  DOMAIN-KEYWORD,macked
+  - DOMAIN-SUFFIX,tradingview.com
+  - DOMAIN-SUFFIX,linkedin.com
+  - DOMAIN-SUFFIX,elliottwave.com
+  - DOMAIN-SUFFIX,figma.com
+  - DOMAIN-SUFFIX,twinfoo.com
+  - DOMAIN-SUFFIX,z-library.sk
+  - DOMAIN-SUFFIX,v2ex.com
+  - DOMAIN-SUFFIX,pqjc.site
+  - DOMAIN-SUFFIX,xn--mes358aby2apfg.com
+  - DOMAIN-SUFFIX,xn--9kqz23b19z.com
+  - DOMAIN-SUFFIX,xmac.app
+  - DOMAIN-SUFFIX,vk.com
+  - DOMAIN-SUFFIX,userapi.com
+  - DOMAIN-KEYWORD,yourware
+  - DOMAIN-KEYWORD,macked

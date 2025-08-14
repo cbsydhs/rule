@@ -98,8 +98,8 @@ payload:
   - DOMAIN-KEYWORD,colab
   - DOMAIN-KEYWORD,developerprofiles
   - DOMAIN-KEYWORD,generativelanguage
-  DOMAIN-SUFFIX,huggingface.co
-  DOMAIN-SUFFIX,perplexity.ai
-  DOMAIN-SUFFIX,pplx.ai
-  DOMAIN-SUFFIX,x.ai
-  DOMAIN-SUFFIX,coze.com
+  - DOMAIN-SUFFIX,huggingface.co
+  - DOMAIN-SUFFIX,perplexity.ai
+  - DOMAIN-SUFFIX,pplx.ai
+  - DOMAIN-SUFFIX,x.ai
+  - DOMAIN-SUFFIX,coze.com
