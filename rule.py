@@ -1,5 +1,7 @@
+import sys
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
 
 SURGE_BASE = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/{name}/{name}.list"
 CLASH_BASE = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/{name}/{name}.yaml"
@@ -7,13 +9,15 @@ CLASH_BASE = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/mas
 RULES_CONFIG = {
     "rule": {
         "names": [
-            "Google", "YouTube", "Twitter", "Microsoft", "GitHub", "Python", "Telegram",
-            "Wikipedia", "Facebook", "Whatsapp", "Instagram", "Pixiv", "Discord", "Reddit"
+            "Google", "YouTube", "Twitter", "Microsoft", "GitHub", "Python",
+            "Telegram", "Wikipedia", "Facebook", "Whatsapp", "Instagram",
+            "Pixiv", "Discord", "Reddit"
         ],
         "suffix": [
-            "tradingview.com", "linkedin.com", "elliottwave.com", "figma.com", "twinfoo.com",
-            "z-library.sk", "v2ex.com", "pqjc.site", "xn--mes358aby2apfg.com",
-            "xn--9kqz23b19z.com", "xmac.app", "vk.com", "userapi.com"
+            "tradingview.com", "linkedin.com", "elliottwave.com", "figma.com",
+            "twinfoo.com", "z-library.sk", "v2ex.com", "pqjc.site",
+            "xn--mes358aby2apfg.com", "xn--9kqz23b19z.com", "xmac.app",
+            "vk.com", "userapi.com"
         ],
         "keyword": ["yourware", "macked"]
     },
@@ -24,60 +28,73 @@ RULES_CONFIG = {
     }
 }
 
-def build_urls(info):
-    return [
-        SURGE_BASE.format(name=n) for n in info["names"]
-    ] + [
-        CLASH_BASE.format(name=n) for n in info["names"]
-    ]
 
-def fetch_all_urls_concurrently(urls):
+def build_urls():
+    urls = set()
+    for info in RULES_CONFIG.values():
+        for n in info["names"]:
+            urls.add(SURGE_BASE.format(name=n))
+            urls.add(CLASH_BASE.format(name=n))
+    return urls
+
+
+def fetch_all(urls):
     url_to_content = {}
-    with ThreadPoolExecutor() as executor:
-        future_to_url = {executor.submit(requests.get, url, timeout=10): url for url in urls}
+    session = requests.Session()
+    total = len(urls)
+    done = 0
+
+    print()  # 前空行
+
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_url = {executor.submit(session.get, url, timeout=5): url for url in urls}
         for future in as_completed(future_to_url):
             url = future_to_url[future]
+            done += 1
             try:
                 resp = future.result()
                 resp.raise_for_status()
                 url_to_content[url] = resp.text
-            except requests.exceptions.RequestException as e:
-                print(f"Failed to fetch {url}: {e}")
+            except Exception:
+                pass  # 静默失败
+
+            # 百分比进度显示
+            percent = (done / total) * 100
+            sys.stdout.write(f"\rChecking for updates... {percent:.0f}% ({done}/{total})")
+            sys.stdout.flush()
+
+    print("\n")  # 后空行
     return url_to_content
 
-def format_rules(info, fmt, fetched_content_map):
-    base = CLASH_BASE if fmt == "yaml" else SURGE_BASE
-    urls = [base.format(name=n) for n in info["names"]]
-    content_parts = [fetched_content_map.get(url, '') for url in urls]
-    content = '\n'.join(part for part in content_parts if part.strip())
-    extra_rules = ([f"DOMAIN-SUFFIX,{d}" for d in info.get("suffix", [])] +
-                   [f"DOMAIN-KEYWORD,{k}" for k in info.get("keyword", [])])
-    if fmt == "yaml":
-        lines = [
-            line.strip() for line in content.split('\n')
-            if line.strip() and not line.lstrip().startswith(("#", "payload:", "- IP-ASN"))
-        ]
-        lines += [f"- {rule}" for rule in extra_rules]
-        return "payload:\n  " + "\n  ".join(lines)
-    return (content + '\n' if content else '') + '\n'.join(extra_rules)
 
-def main():
-    print("\nChecking for updates...\n")
-    all_urls = set()
-    for info in RULES_CONFIG.values():
-        all_urls.update(build_urls(info))
-    fetched_content_map = fetch_all_urls_concurrently(list(all_urls))
-    if fetched_content_map:
-        for fmt in ("list", "yaml"):
-            ext = "yaml" if fmt == "yaml" else "list"
-            for name, info in sorted(RULES_CONFIG.items()):
-                text = format_rules(info, fmt, fetched_content_map)
-                with open(f"{name}.{ext}", "w", encoding="utf-8") as f:
-                    f.write(text)
-                print(f"✔ {name}.{ext}")
-    else:
-        print("✖ Upgrade failed. No files were generated.")
-    input("\nPress Enter to exit...")
+def generate_output(url_to_content):
+    for fmt, base in (("list", SURGE_BASE), ("yaml", CLASH_BASE)):
+        for name, info in RULES_CONFIG.items():
+            urls = [base.format(name=n) for n in info["names"]]
+            content = '\n'.join(url_to_content.get(url, '').strip() for url in urls if url_to_content.get(url, '').strip())
+
+            # 额外规则
+            extra = [f"DOMAIN-SUFFIX,{d}" for d in info["suffix"]] + [f"DOMAIN-KEYWORD,{k}" for k in info["keyword"]]
+
+            if fmt == "yaml":
+                lines = [
+                    line.strip()
+                    for line in content.splitlines()
+                    if line.strip() and not line.lstrip().startswith(("#", "payload:", "- IP-ASN"))
+                ]
+                lines += [f"- {rule}" for rule in extra]
+                text = "payload:\n  " + "\n  ".join(lines)
+            else:
+                text = (content + '\n' if content else '') + '\n'.join(extra)
+
+            Path(f"{name}.{fmt}").write_text(text, encoding="utf-8")
+            print(f"✓ {name}.{fmt}")
+
 
 if __name__ == "__main__":
-    main()
+    urls = build_urls()
+    content_map = fetch_all(urls)
+    if content_map:
+        generate_output(content_map)
+    else:
+        print("✗ Update failed. No files were generated.")
