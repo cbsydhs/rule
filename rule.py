@@ -88,7 +88,7 @@ def generate_output(url_to_content):
                 text = (content + '\n' if content else '') + '\n'.join(extra)
 
             Path(f"{name}.{fmt}").write_text(text, encoding="utf-8")
-            print(f"✓ {name}.{fmt}")
+            print(f"\033[92m✔\033[0m {name}.{fmt}")
 
 
 if __name__ == "__main__":
