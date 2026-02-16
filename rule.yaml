@@ -138,6 +138,7 @@ payload:
   - DOMAIN-SUFFIX,bumptop.net
   - DOMAIN-SUFFIX,bumptop.org
   - DOMAIN-SUFFIX,bumptunes.com
+  - DOMAIN-SUFFIX,c.gle
   - DOMAIN-SUFFIX,campuslondon.com
   - DOMAIN-SUFFIX,capitalg.com
   - DOMAIN-SUFFIX,certificate-transparency.dev
@@ -891,6 +892,7 @@ payload:
   - IP-CIDR6,2620:120:e000::/40
   - DOMAIN-SUFFIX,ads-twitter.com
   - DOMAIN-SUFFIX,cms-twdigitalassets.com
+  - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,periscope.tv
   - DOMAIN-SUFFIX,pscp.tv
   - DOMAIN-SUFFIX,t.co
@@ -1580,6 +1582,7 @@ payload:
   - DOMAIN-SUFFIX,yammerusercontent.com
   - DOMAIN-SUFFIX,1drv.com
   - DOMAIN-SUFFIX,livefilestore.com
+  - DOMAIN-SUFFIX,microsoftpersonalcontent.com
   - DOMAIN-SUFFIX,onedrive.com
   - DOMAIN-SUFFIX,sharepoint.com
   - DOMAIN-SUFFIX,sharepointonline.com
@@ -1653,7 +1656,9 @@ payload:
   - DOMAIN-SUFFIX,usercontent.dev
   - DOMAIN-KEYWORD,nicegram
   - IP-CIDR,109.239.140.0/24
+  - IP-CIDR,139.59.210.98/32
   - IP-CIDR,149.154.160.0/20
+  - IP-CIDR,196.55.216.167/32
   - IP-CIDR,5.28.192.0/18
   - IP-CIDR,91.108.0.0/16
   - IP-CIDR6,2001:67c:4e8::/48
@@ -2319,12 +2324,13 @@ payload:
   - DOMAIN-SUFFIX,figma.com
   - DOMAIN-SUFFIX,twinfoo.com
   - DOMAIN-SUFFIX,z-library.sk
-  - DOMAIN-SUFFIX,v2ex.com
   - DOMAIN-SUFFIX,pqjc.site
   - DOMAIN-SUFFIX,xn--mes358aby2apfg.com
   - DOMAIN-SUFFIX,xn--9kqz23b19z.com
   - DOMAIN-SUFFIX,xmac.app
   - DOMAIN-SUFFIX,vk.com
   - DOMAIN-SUFFIX,userapi.com
+  - DOMAIN-SUFFIX,yourware.com
+  - DOMAIN-SUFFIX,minorpatch.com
   - DOMAIN-KEYWORD,yourware
   - DOMAIN-KEYWORD,macked

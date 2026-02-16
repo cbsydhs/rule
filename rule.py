@@ -15,15 +15,15 @@ RULES_CONFIG = {
         ],
         "suffix": [
             "tradingview.com", "linkedin.com", "elliottwave.com", "figma.com",
-            "twinfoo.com", "z-library.sk", "v2ex.com", "pqjc.site",
+            "twinfoo.com", "z-library.sk", "pqjc.site",
             "xn--mes358aby2apfg.com", "xn--9kqz23b19z.com", "xmac.app",
-            "vk.com", "userapi.com"
+            "vk.com", "userapi.com", "yourware.com", "minorpatch.com"
         ],
         "keyword": ["yourware", "macked"]
     },
     "x": {
-        "names": ["OpenAI", "Claude", "Copilot", "Gemini"],
-        "suffix": ["huggingface.co", "perplexity.ai", "pplx.ai", "x.ai", "coze.com"],
+        "names": ["OpenAI", "Claude", "Gemini"],
+        "suffix": ["huggingface.co"],
         "keyword": []
     }
 }
