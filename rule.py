@@ -16,20 +16,20 @@ MIN_SUCCESS_RATE = 0.8
 CONFIG_FILE = Path("sources.yaml")
 
 
-def load_rules_config():
-    if not CONFIG_FILE.exists():
-        raise FileNotFoundError(f"Config file not found: {CONFIG_FILE}")
+def load_rules_config(config_file):
+    if not config_file.exists():
+        raise FileNotFoundError(f"Config file not found: {config_file}")
 
     try:
-        data = json.loads(CONFIG_FILE.read_text(encoding="utf-8"))
+        data = json.loads(config_file.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
         raise ValueError(
-            f"{CONFIG_FILE} parse failed. Use YAML-compatible JSON format or install YAML parser support. "
+            f"{config_file} parse failed. Use YAML-compatible JSON format or install YAML parser support. "
             f"Details: {exc}"
         ) from exc
 
     if not isinstance(data, dict) or not data:
-        raise ValueError(f"{CONFIG_FILE} must be a non-empty mapping.")
+        raise ValueError(f"{config_file} must be a non-empty mapping.")
 
     for group, info in data.items():
         if not isinstance(info, dict):
@@ -178,12 +178,12 @@ def generate_output(url_to_content, rules_config):
                 "source_count": len(info["names"]),
                 "extra_count": len(extra),
             }
-            print(f"\033[92m✔\033[0m  \033[1m{name}.{fmt}\033[0m ({len(unique)} rules)")
+            print(f"\033[92m✔\033[0m  \033[1m{output_file}\033[0m ({len(unique)} rules)")
     return output_stats
 
 
-if __name__ == "__main__":
-    rules_config = load_rules_config()
+def main():
+    rules_config = load_rules_config(CONFIG_FILE)
     urls = build_urls(rules_config)
     content_map, fetch_report = fetch_all(urls)
     total = len(fetch_report)
@@ -216,5 +216,10 @@ if __name__ == "__main__":
         "fetch": fetch_report,
         "outputs": output_stats,
     }
-    Path("manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("\033[92m✔\033[0m  \033[1mmanifest.json\033[0m")
+    manifest_file = Path("manifest.json")
+    manifest_file.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"\033[92m✔\033[0m  \033[1m{manifest_file}\033[0m")
+
+
+if __name__ == "__main__":
+    main()

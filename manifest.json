@@ -1,246 +1,246 @@
 {
-  "generated_at_unix": 1771237398,
+  "generated_at_unix": 1771238161,
   "success_rate": 1.0,
   "total_urls": 34,
   "ok_urls": 34,
   "failed_urls": 0,
   "fetch": {
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 1201,
-      "duration_ms": 187,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Python/Python.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 302,
-      "duration_ms": 189,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 1680,
-      "duration_ms": 191,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 1353,
-      "duration_ms": 192,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pixiv/Pixiv.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 346,
-      "duration_ms": 195,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 666,
-      "duration_ms": 194,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Reddit/Reddit.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 426,
-      "duration_ms": 201,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 23208,
-      "duration_ms": 203,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 467,
-      "duration_ms": 179,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 1469,
-      "duration_ms": 191,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 5451,
-      "duration_ms": 186,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 1191,
-      "duration_ms": 185,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Python/Python.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 335,
-      "duration_ms": 194,
-      "error": ""
-    },
     "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml": {
       "ok": true,
       "status_code": 200,
       "bytes": 312,
-      "duration_ms": 201,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 708,
-      "duration_ms": 440,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 1116,
-      "duration_ms": 444,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 1250,
-      "duration_ms": 183,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 19424,
-      "duration_ms": 190,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 17399,
-      "duration_ms": 197,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 287,
-      "duration_ms": 409,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 22923,
-      "duration_ms": 175,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 5935,
-      "duration_ms": 181,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gemini/Gemini.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 605,
-      "duration_ms": 440,
+      "duration_ms": 186,
       "error": ""
     },
     "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml": {
       "ok": true,
       "status_code": 200,
       "bytes": 1590,
-      "duration_ms": 185,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 387,
-      "duration_ms": 185,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikipedia/Wikipedia.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 499,
-      "duration_ms": 176,
+      "duration_ms": 188,
       "error": ""
     },
     "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list": {
       "ok": true,
       "status_code": 200,
       "bytes": 20226,
-      "duration_ms": 176,
+      "duration_ms": 188,
       "error": ""
     },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list": {
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml": {
       "ok": true,
       "status_code": 200,
-      "bytes": 20605,
-      "duration_ms": 439,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 556,
-      "duration_ms": 201,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 1076,
-      "duration_ms": 464,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 265,
-      "duration_ms": 465,
-      "error": ""
-    },
-    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list": {
-      "ok": true,
-      "status_code": 200,
-      "bytes": 752,
+      "bytes": 1201,
       "duration_ms": 191,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 23208,
+      "duration_ms": 193,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 666,
+      "duration_ms": 186,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 22923,
+      "duration_ms": 189,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikipedia/Wikipedia.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 499,
+      "duration_ms": 422,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 1191,
+      "duration_ms": 431,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gemini/Gemini.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 605,
+      "duration_ms": 435,
       "error": ""
     },
     "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list": {
       "ok": true,
       "status_code": 200,
       "bytes": 244,
-      "duration_ms": 445,
+      "duration_ms": 447,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Reddit/Reddit.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 426,
+      "duration_ms": 465,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 1469,
+      "duration_ms": 185,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 1680,
+      "duration_ms": 430,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pixiv/Pixiv.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 346,
+      "duration_ms": 454,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 17399,
+      "duration_ms": 452,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 5935,
+      "duration_ms": 192,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 467,
+      "duration_ms": 443,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 265,
+      "duration_ms": 178,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 19424,
+      "duration_ms": 458,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 5451,
+      "duration_ms": 192,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 1353,
+      "duration_ms": 438,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 708,
+      "duration_ms": 443,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 1116,
+      "duration_ms": 466,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 1250,
+      "duration_ms": 186,
       "error": ""
     },
     "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list": {
       "ok": true,
       "status_code": 200,
       "bytes": 1117,
-      "duration_ms": 509,
+      "duration_ms": 186,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 1076,
+      "duration_ms": 436,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Python/Python.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 302,
+      "duration_ms": 425,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 20605,
+      "duration_ms": 176,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 387,
+      "duration_ms": 444,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 752,
+      "duration_ms": 422,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Python/Python.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 335,
+      "duration_ms": 435,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 556,
+      "duration_ms": 421,
+      "error": ""
+    },
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list": {
+      "ok": true,
+      "status_code": 200,
+      "bytes": 287,
+      "duration_ms": 419,
       "error": ""
     }
   },
