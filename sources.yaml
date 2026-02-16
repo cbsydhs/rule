@@ -1,0 +1,50 @@
+{
+  "rule": {
+    "names": [
+      "Google",
+      "YouTube",
+      "Twitter",
+      "Microsoft",
+      "GitHub",
+      "Python",
+      "Telegram",
+      "Wikipedia",
+      "Facebook",
+      "Whatsapp",
+      "Instagram",
+      "Pixiv",
+      "Discord",
+      "Reddit"
+    ],
+    "suffix": [
+      "tradingview.com",
+      "linkedin.com",
+      "elliottwave.com",
+      "figma.com",
+      "twinfoo.com",
+      "z-library.sk",
+      "pqjc.site",
+      "xn--mes358aby2apfg.com",
+      "xn--9kqz23b19z.com",
+      "xmac.app",
+      "vk.com",
+      "userapi.com",
+      "minorpatch.com"
+    ],
+    "keyword": [
+      "yourware",
+      "macked"
+    ]
+  },
+  "x": {
+    "names": [
+      "OpenAI",
+      "Claude",
+      "Gemini"
+    ],
+    "suffix": [
+      "huggingface.co"
+    ],
+    "keyword": []
+  }
+}

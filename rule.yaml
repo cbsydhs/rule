@@ -887,9 +887,6 @@ payload:
   - DOMAIN-SUFFIX,yt.be
   - DOMAIN-SUFFIX,ytimg.com
   - DOMAIN-KEYWORD,youtube
-  - IP-CIDR,172.110.32.0/21
-  - IP-CIDR,216.73.80.0/20
-  - IP-CIDR6,2620:120:e000::/40
   - DOMAIN-SUFFIX,ads-twitter.com
   - DOMAIN-SUFFIX,cms-twdigitalassets.com
   - DOMAIN-SUFFIX,grok.com
@@ -2254,9 +2251,6 @@ payload:
   - IP-CIDR,54.93.124.31/32
   - DOMAIN,graph.facebook.com
   - DOMAIN-SUFFIX,bintray.com
-  - DOMAIN-SUFFIX,whatsapp.biz
-  - DOMAIN-SUFFIX,whatsapp.com
-  - DOMAIN-SUFFIX,whatsapp.net
   - DOMAIN-KEYWORD,whatsapp
   - IP-CIDR,158.85.224.160/27
   - IP-CIDR,158.85.46.128/27
@@ -2269,9 +2263,6 @@ payload:
   - IP-CIDR,34.224.0.0/12
   - IP-CIDR,50.22.198.204/30
   - IP-CIDR,54.242.0.0/15
-  - DOMAIN-SUFFIX,cdninstagram.com
-  - DOMAIN-SUFFIX,instagr.am
-  - DOMAIN-SUFFIX,instagram.com
   - DOMAIN-KEYWORD,instagram
   - DOMAIN-SUFFIX,booth.pm
   - DOMAIN-SUFFIX,fanbox.cc
@@ -2330,7 +2321,6 @@ payload:
   - DOMAIN-SUFFIX,xmac.app
   - DOMAIN-SUFFIX,vk.com
   - DOMAIN-SUFFIX,userapi.com
-  - DOMAIN-SUFFIX,yourware.com
   - DOMAIN-SUFFIX,minorpatch.com
   - DOMAIN-KEYWORD,yourware
   - DOMAIN-KEYWORD,macked
